@@ -24,8 +24,9 @@ This library also makes use of [HIDAPI](http://www.signal11.us/oss/hidapi/).
 [Doxygen pages](http://zkemble.github.io/libmcp2221/)
 
 Hint:
+
 | Function prefix | Description
-| --------------- | ------
+| --------------- | -----------
 | mcp2221_set*    | Set SRAM config, this takes immediate effect
 | mcp2221_get*    | Get SRAM config
 | mcp2221_save*   | Writes to flash, this setting is used at startup
