@@ -1,0 +1,59 @@
+/*
+ * Project: MCP2221 HID Library
+ * Author: Zak Kemble, contact@zakkemble.co.uk
+ * Copyright: (C) 2015 by Zak Kemble
+ * License: GNU GPL v3 (see License.txt)
+ * Web: http://blog.zakkemble.co.uk/mcp2221-hid-library/
+ */
+
+#include "win.h"
+
+#define APPNAME 		"MCP2221 Lib"
+#define APPNAME_TERM	"MCP2221 Lib\0"
+#define APPVERSION		1,0,0,0
+#define APPVERSION_STR	"1.0.0.0\0"
+#define APPCOMPANY		"zakkemble.co.uk\0"
+#define APPCOPYRIGHT	"(c) Zak Kemble 2015\0"
+
+CREATEPROCESS_MANIFEST_RESOURCE_ID RT_MANIFEST "libmcp2221.dll.manifest"
+
+#define VER_FILEVERSION             APPVERSION
+#define VER_FILEVERSION_STR         APPVERSION_STR
+
+#define VER_PRODUCTVERSION          APPVERSION
+#define VER_PRODUCTVERSION_STR      APPVERSION_STR
+
+#define VER_COMPANYNAME_STR			APPCOMPANY
+#define VER_PRODUCTNAME_STR			APPNAME_TERM
+
+#define	VER_FILEDESCRIPTION_STR		APPNAME_TERM
+
+#define VER_LEGALCOPYRIGHT_STR		APPCOPYRIGHT
+
+VS_VERSION_INFO VERSIONINFO
+FILEVERSION    	VER_FILEVERSION
+PRODUCTVERSION 	VER_PRODUCTVERSION
+FILEFLAGSMASK  	VS_FFI_FILEFLAGSMASK
+FILEFLAGS      	0
+FILEOS         	VOS__WINDOWS32
+FILETYPE       	VFT_DLL
+FILESUBTYPE    	VFT2_UNKNOWN
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904E4"
+        BEGIN
+            VALUE "CompanyName",      VER_COMPANYNAME_STR
+            VALUE "FileDescription",  VER_FILEDESCRIPTION_STR
+            VALUE "FileVersion",      VER_FILEVERSION_STR
+            VALUE "LegalCopyright",   VER_LEGALCOPYRIGHT_STR
+            VALUE "ProductName",      VER_PRODUCTNAME_STR
+            VALUE "ProductVersion",   VER_PRODUCTVERSION_STR
+        END
+    END
+
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
