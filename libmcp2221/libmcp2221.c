@@ -121,10 +121,15 @@ static void addUsbDevList(int id, struct hid_device_info* dev2)
 	strcpy(dev->devPath, dev2->path);
 
 	// Serial
-	int len = wcslen(dev2->serial_number);
-	dev->serial = malloc((len * sizeof(wchar_t)) + sizeof(wchar_t));
-	wcsncpy(dev->serial, dev2->serial_number, len);
-	dev->serial[len] = 0x0000;
+	if(!dev2->serial_number)
+		dev->serial = NULL;
+	else
+	{
+		int len = wcslen(dev2->serial_number);
+		dev->serial = malloc((len * sizeof(wchar_t)) + sizeof(wchar_t));
+		wcsncpy(dev->serial, dev2->serial_number, len);
+		dev->serial[len] = L'\0';
+	}
 
 	dev->id = id;
 }
@@ -270,9 +275,11 @@ static mcp2221_error getDescriptor(mcp2221_t* device, uint8_t* report, wchar_t* 
 
 	if(len > MCP2221_STR_LEN - 1)
 		len = MCP2221_STR_LEN - 1;
+	else if(len < 1) // Empty string
+		len = 0;
 
 	wcsncpy(dest, (wchar_t*)&report[4], len);
-	dest[len] = 0x0000; // Make sure string is null terminated
+	dest[len] = L'\0'; // Make sure string is null terminated
 
 	return res;
 }
@@ -319,7 +326,7 @@ static mcp2221_error getDescriptor2(mcp2221_t* device, wchar_t* buffer, flash_se
 		len = MCP2221_STR_LEN - 1;
 
 	wcsncpy(buffer, (wchar_t*)&report[4], len);
-	buffer[len] = 0x0000; // Make sure string is null terminated
+	buffer[len] = L'\0'; // Make sure string is null terminated
 
 	return res;
 }
@@ -461,7 +468,7 @@ int LIB_EXPORT mcp2221_find(int vid, int pid, wchar_t* manufacturer, wchar_t* pr
 
 	while (currentDevice)
 	{
-		debug_printf("Device Found\n  type: %04hx %04hx\n  path: %s\n  serial_number: %ls", currentDevice->vendor_id, currentDevice->product_id, currentDevice->path, currentDevice->serial_number);
+		debug_printf("Device Found\n  type: %04hx %04hx\n  path: %s\n  serial_number: %ls", currentDevice->vendor_id, currentDevice->product_id, currentDevice->path, currentDevice->serial_number ? currentDevice->serial_number : L"(NONE)");
 		debug_printf("\n");
 		debug_printf("  Manufacturer: %ls\n", currentDevice->manufacturer_string);
 		debug_printf("  Product:      %ls\n", currentDevice->product_string);

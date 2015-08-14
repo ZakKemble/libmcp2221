@@ -1,2 +1,5 @@
-2015-08-13 (v1.0):
+2015-08-13 (v1.0.0):
 	- Initial release
+
+2015-08-14 (v1.0.1):
+	- Fixed some null issues
