@@ -71,17 +71,17 @@ int main(void)
 	gpioConf.conf[0].direction	= MCP2221_GPIO_DIR_OUTPUT;
 	gpioConf.conf[0].value		= MCP2221_GPIO_VALUE_HIGH;
 
-	// Configure GPIO 1 as alternative function 2 (which is interrupt input for GPIO1)
+	// Configure GPIO 1 as alternative function 3 (which is interrupt input for GPIO1)
 	gpioConf.conf[1].gpios		= MCP2221_GPIO1;
-	gpioConf.conf[1].mode		= MCP2221_GPIO_MODE_ALT2;
+	gpioConf.conf[1].mode		= MCP2221_GPIO_MODE_ALT3;
 
-	// Configure GPIO 2 as alternate function 1 (DAC output)
+	// Configure GPIO 2 as alternate function 2 (DAC output)
 	gpioConf.conf[2].gpios		= MCP2221_GPIO2;
-	gpioConf.conf[2].mode		= MCP2221_GPIO_MODE_ALT1;
+	gpioConf.conf[2].mode		= MCP2221_GPIO_MODE_ALT2;
 
-	// Configure GPIO 3 as as alternate function 0 (which is ADC3 for GPIO3)
+	// Configure GPIO 3 as as alternate function 1 (which is ADC3 for GPIO3)
 	gpioConf.conf[3].gpios		= MCP2221_GPIO3;
-	gpioConf.conf[3].mode		= MCP2221_GPIO_MODE_ALT0;
+	gpioConf.conf[3].mode		= MCP2221_GPIO_MODE_ALT1;
 
 	// Apply config
 	mcp2221_setGPIOConf(myDev, &gpioConf);

@@ -53,9 +53,9 @@ int main(void)
 	gpioConf.conf[0].direction	= MCP2221_GPIO_DIR_OUTPUT;
 	gpioConf.conf[0].value		= MCP2221_GPIO_VALUE_LOW;
 
-	// Configure GPIO 2 as alternate function 1, which is DAC
+	// Configure GPIO 2 as alternate function 2, which is DAC
 	gpioConf.conf[1].gpios		= MCP2221_GPIO2;
-	gpioConf.conf[1].mode		= MCP2221_GPIO_MODE_ALT1;
+	gpioConf.conf[1].mode		= MCP2221_GPIO_MODE_ALT2;
 
 	// Apply config
 	mcp2221_setGPIOConf(myDev, &gpioConf);

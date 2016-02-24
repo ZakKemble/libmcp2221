@@ -89,16 +89,22 @@ typedef enum
 /**
  * \enum mcp2221_gpio_mode_t 
  * \brief GPIO modes (check GP DESIGNATION TABLE in the datasheet for what the dedicated and alternative functions do for each pin)
+ * \note GP DESIGNATION TABLE has the ALT_FUNC numbered 0-2, should be 1-3 to match the rest of the datasheet
  */
 typedef enum
 {
 	MCP2221_GPIO_MODE_GPIO = 0,			/**< Normal IO, manually set to input/output, high/low */
 	MCP2221_GPIO_MODE_DEDI = 1,			/**< Dedicated function */
-	MCP2221_GPIO_MODE_ALT0 = 2,			/**< Alternative function 0 */
-	MCP2221_GPIO_MODE_ALT1 = 3,			/**< Alternative function 1 */
-	MCP2221_GPIO_MODE_ALT2 = 4,			/**< Alternative function 2 */
+	MCP2221_GPIO_MODE_ALT1 = 2,			/**< Alternative function 1 */
+	MCP2221_GPIO_MODE_ALT2 = 3,			/**< Alternative function 2 */
+	MCP2221_GPIO_MODE_ALT3 = 4,			/**< Alternative function 3 */
 	MCP2221_GPIO_MODE_INVALID = 0xff	/**< Invalid */
 }mcp2221_gpio_mode_t;
+
+#define MCP2221_GPIO_MODE_SSPND	MCP2221_GPIO_MODE_DEDI	/**< TODO */
+#define MCP2221_GPIO_MODE_ADC	MCP2221_GPIO_MODE_ALT1	/**< TODO */
+#define MCP2221_GPIO_MODE_DAC	MCP2221_GPIO_MODE_ALT2	/**< TODO */
+#define MCP2221_GPIO_MODE_IOC	MCP2221_GPIO_MODE_ALT3	/**< TODO */
 
 /**
  * \enum mcp2221_gpio_value_t 

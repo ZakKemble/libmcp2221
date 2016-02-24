@@ -46,9 +46,9 @@ int main(void)
 	gpioConf.conf[0].direction	= MCP2221_GPIO_DIR_OUTPUT;
 	gpioConf.conf[0].value		= MCP2221_GPIO_VALUE_LOW;
 
-	// Configure GPIO 1 as alternate function 2, which is interrupt input
+	// Configure GPIO 1 as alternate function 3, which is interrupt input
 	gpioConf.conf[1].gpios		= MCP2221_GPIO1;
-	gpioConf.conf[1].mode		= MCP2221_GPIO_MODE_ALT2;
+	gpioConf.conf[1].mode		= MCP2221_GPIO_MODE_ALT3;
 
 	// Apply config
 	mcp2221_setGPIOConf(myDev, &gpioConf);

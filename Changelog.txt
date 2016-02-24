@@ -1,5 +1,8 @@
-2015-08-13 (v1.0.0):
-	- Initial release
+2016-02-24 (v1.0.2):
+	- Changed MCP2221_GPIO_MODE_ALT numbering to match the datasheet (1-3 instead of 0-2)
 
 2015-08-14 (v1.0.1):
 	- Fixed some null issues
+
+2015-08-13 (v1.0.0):
+	- Initial release
