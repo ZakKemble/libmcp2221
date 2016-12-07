@@ -438,7 +438,7 @@ mcp2221_error mcp2221_setGPIO(mcp2221_t* device, mcp2221_gpio_t pins, mcp2221_gp
 *
 * @param [device] Device to operate on
 * @param [div] Pointer to ::mcp2221_clkdiv_t variable where value will be placed
-* @param [div] Pointer to ::mcp2221_clkduty_t variable where value will be placed
+* @param [duty] Pointer to ::mcp2221_clkduty_t variable where value will be placed
 * @return ::mcp2221_error error code
 */
 mcp2221_error mcp2221_getClockOut(mcp2221_t* device, mcp2221_clkdiv_t* div, mcp2221_clkduty_t* duty);
