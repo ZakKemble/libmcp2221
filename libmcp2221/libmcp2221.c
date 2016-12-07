@@ -600,7 +600,7 @@ mcp2221_error LIB_EXPORT mcp2221_setClockOut(mcp2221_t* device, mcp2221_clkdiv_t
 	return res;
 }
 
-mcp2221_error LIB_EXPORT mcp2221_getClockOut(mcp2221_t* device, mcp2221_clkdiv_t* div)
+mcp2221_error LIB_EXPORT mcp2221_getClockOut(mcp2221_t* device, mcp2221_clkdiv_t* div, mcp2221_clkduty_t* duty)
 {
 	NEW_REPORT(report);
 	mcp2221_error res;
@@ -608,7 +608,10 @@ mcp2221_error LIB_EXPORT mcp2221_getClockOut(mcp2221_t* device, mcp2221_clkdiv_t
 		return res;
 	res = doTransaction(device, report);
 	if(res == MCP2221_SUCCESS)
-		*div = report[5] & 0x1F;
+	{
+		*div = report[5] & 0x07;
+		*duty = report[5] & 0x18;
+	}
 	return res;
 }
 
@@ -1018,20 +1021,16 @@ mcp2221_error LIB_EXPORT mcp2221_savePolarity(mcp2221_t* device, mcp2221_dedipin
 
 mcp2221_error LIB_EXPORT mcp2221_saveClockOut(mcp2221_t* device, mcp2221_clkdiv_t clkdiv, mcp2221_clkduty_t duty)
 {
-	UNUSED(duty); // No option for saving duty cycle to flash :/
-
 	NEW_REPORT(report);
 	mcp2221_error res;
 	if((res = saveReport(device, report)) != MCP2221_SUCCESS)
 		return res;
 
-	// TODO no duty cycle option?
-
-	if(clkdiv != (report[5] & 0x1F))
+	if(clkdiv != (report[5] & 0x07) || duty != (report[5] & 0x18))
 	{
 		NEW_REPORT(reportUpdate);
 		saveReportUpdate(report, reportUpdate);
-		reportUpdate[3] = clkdiv;
+		reportUpdate[3] = clkdiv | duty;
 		res = doTransaction(device, reportUpdate);
 	}
 
@@ -1243,14 +1242,12 @@ mcp2221_error LIB_EXPORT mcp2221_loadPolarity(mcp2221_t* device, mcp2221_dedipin
 
 mcp2221_error LIB_EXPORT mcp2221_loadClockOut(mcp2221_t* device, mcp2221_clkdiv_t* div, mcp2221_clkduty_t* duty)
 {
-	UNUSED(duty); // No option for reading duty cycle :/
-
 	NEW_REPORT(report);
 	mcp2221_error res;
 	if((res = saveReport(device, report)) != MCP2221_SUCCESS)
 		return res;
-	*div = (report[5] & 0x1F);
-	// TODO no duty cycle option?
+	*div = (report[5] & 0x07);
+	*duty = (report[5] & 0x18);
 	return res;
 }
 

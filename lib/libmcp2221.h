@@ -438,9 +438,10 @@ mcp2221_error mcp2221_setGPIO(mcp2221_t* device, mcp2221_gpio_t pins, mcp2221_gp
 *
 * @param [device] Device to operate on
 * @param [div] Pointer to ::mcp2221_clkdiv_t variable where value will be placed
+* @param [div] Pointer to ::mcp2221_clkduty_t variable where value will be placed
 * @return ::mcp2221_error error code
 */
-mcp2221_error mcp2221_getClockOut(mcp2221_t* device, mcp2221_clkdiv_t* div);
+mcp2221_error mcp2221_getClockOut(mcp2221_t* device, mcp2221_clkdiv_t* div, mcp2221_clkduty_t* duty);
 
 /**
 * @brief Get the current DAC voltage reference and output value (SRAM)
@@ -732,7 +733,7 @@ mcp2221_error mcp2221_loadPolarity(mcp2221_t* device, mcp2221_dedipin_t pin, int
 *
 * @param [device] Device to operate on
 * @param [div] 
-* @param [duty] TODO
+* @param [duty]
 * @return ::mcp2221_error error code
 */
 mcp2221_error mcp2221_loadClockOut(mcp2221_t* device, mcp2221_clkdiv_t* div, mcp2221_clkduty_t* duty);
