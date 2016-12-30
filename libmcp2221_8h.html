@@ -25,7 +25,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MCP2221 HID Library
-   &#160;<span id="projectnumber">1.0</span>
+   &#160;<span id="projectnumber">1.0.4</span>
    </div>
   </td>
  </tr>
@@ -134,6 +134,14 @@ Macros</h2></td></tr>
 <tr class="separator:a8bb7653b8dcdba18b393bf9a9244ae1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a13e3a85426e84cfa272d693c7da2d036"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="libmcp2221_8h.html#a13e3a85426e84cfa272d693c7da2d036">MCP2221_REPORT_SIZE</a>&#160;&#160;&#160;64</td></tr>
 <tr class="separator:a13e3a85426e84cfa272d693c7da2d036"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc920106ea5f07939bb573388f1d9567"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="libmcp2221_8h.html#afc920106ea5f07939bb573388f1d9567">MCP2221_GPIO_MODE_SSPND</a>&#160;&#160;&#160;<a class="el" href="libmcp2221_8h.html#a65b030f1e23bb1515fba133297b81eb3ab77c8bd06d115342f005597990a436e1">MCP2221_GPIO_MODE_DEDI</a></td></tr>
+<tr class="separator:afc920106ea5f07939bb573388f1d9567"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45d42084d5a9c93dd312f79fadef9509"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="libmcp2221_8h.html#a45d42084d5a9c93dd312f79fadef9509">MCP2221_GPIO_MODE_ADC</a>&#160;&#160;&#160;<a class="el" href="libmcp2221_8h.html#a65b030f1e23bb1515fba133297b81eb3ae52d1b2ff3dd36f4f25a30f486516a53">MCP2221_GPIO_MODE_ALT1</a></td></tr>
+<tr class="separator:a45d42084d5a9c93dd312f79fadef9509"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a608e04b41c7baf5bd35c270b9d31c9d3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="libmcp2221_8h.html#a608e04b41c7baf5bd35c270b9d31c9d3">MCP2221_GPIO_MODE_DAC</a>&#160;&#160;&#160;<a class="el" href="libmcp2221_8h.html#a65b030f1e23bb1515fba133297b81eb3ae8cf678f7ed979d15dc33f8b720cd6e7">MCP2221_GPIO_MODE_ALT2</a></td></tr>
+<tr class="separator:a608e04b41c7baf5bd35c270b9d31c9d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd9705937ecf9c782e43fdd281c8843f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="libmcp2221_8h.html#acd9705937ecf9c782e43fdd281c8843f">MCP2221_GPIO_MODE_IOC</a>&#160;&#160;&#160;<a class="el" href="libmcp2221_8h.html#a65b030f1e23bb1515fba133297b81eb3a986e71ece19d9e66db889d1aeea3f7ce">MCP2221_GPIO_MODE_ALT3</a></td></tr>
+<tr class="separator:acd9705937ecf9c782e43fdd281c8843f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -225,13 +233,13 @@ Enumerations</h2></td></tr>
 <a class="el" href="libmcp2221_8h.html#a81b631e69f32e6c552a11f7249a0e429a4901dc1815682a2c34a57e3950d31910">MCP2221_CLKDIV_64</a> = 6, 
 <a class="el" href="libmcp2221_8h.html#a81b631e69f32e6c552a11f7249a0e429ae4bbbe749300ea024a927b7bdc584333">MCP2221_CLKDIV_128</a> = 7
 <br />
- }<tr class="memdesc:a81b631e69f32e6c552a11f7249a0e429"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clock reference output divider from 12MHz.  <a href="libmcp2221_8h.html#a81b631e69f32e6c552a11f7249a0e429">More...</a><br /></td></tr>
+ }<tr class="memdesc:a81b631e69f32e6c552a11f7249a0e429"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clock reference output divider from 48MHz.  <a href="libmcp2221_8h.html#a81b631e69f32e6c552a11f7249a0e429">More...</a><br /></td></tr>
 </td></tr>
 <tr class="separator:a81b631e69f32e6c552a11f7249a0e429"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a685f57a234ef7f0bdd9dc93ad6c380e8"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="libmcp2221_8h.html#a685f57a234ef7f0bdd9dc93ad6c380e8">mcp2221_clkduty_t</a> { <a class="el" href="libmcp2221_8h.html#a685f57a234ef7f0bdd9dc93ad6c380e8a14912730b9ffb874b68657eac08bd316">MCP2221_CLKDUTY_0</a> = 0x18, 
-<a class="el" href="libmcp2221_8h.html#a685f57a234ef7f0bdd9dc93ad6c380e8acba37b95106ffe9e63a3cb39eac4055a">MCP2221_CLKDUTY_25</a> = 0x10, 
-<a class="el" href="libmcp2221_8h.html#a685f57a234ef7f0bdd9dc93ad6c380e8a5ea0ae73a048955e2941887c0fbe7b6d">MCP2221_CLKDUTY_50</a> = 0x08, 
-<a class="el" href="libmcp2221_8h.html#a685f57a234ef7f0bdd9dc93ad6c380e8a1754dab210aceedb45a685b1c799eb77">MCP2221_CLKDUTY_75</a> = 0x00
+<tr class="memitem:a685f57a234ef7f0bdd9dc93ad6c380e8"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="libmcp2221_8h.html#a685f57a234ef7f0bdd9dc93ad6c380e8">mcp2221_clkduty_t</a> { <a class="el" href="libmcp2221_8h.html#a685f57a234ef7f0bdd9dc93ad6c380e8a14912730b9ffb874b68657eac08bd316">MCP2221_CLKDUTY_0</a> = 0x00, 
+<a class="el" href="libmcp2221_8h.html#a685f57a234ef7f0bdd9dc93ad6c380e8acba37b95106ffe9e63a3cb39eac4055a">MCP2221_CLKDUTY_25</a> = 0x08, 
+<a class="el" href="libmcp2221_8h.html#a685f57a234ef7f0bdd9dc93ad6c380e8a5ea0ae73a048955e2941887c0fbe7b6d">MCP2221_CLKDUTY_50</a> = 0x10, 
+<a class="el" href="libmcp2221_8h.html#a685f57a234ef7f0bdd9dc93ad6c380e8a1754dab210aceedb45a685b1c799eb77">MCP2221_CLKDUTY_75</a> = 0x18
  }<tr class="memdesc:a685f57a234ef7f0bdd9dc93ad6c380e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clock reference output duty cycle.  <a href="libmcp2221_8h.html#a685f57a234ef7f0bdd9dc93ad6c380e8">More...</a><br /></td></tr>
 </td></tr>
 <tr class="separator:a685f57a234ef7f0bdd9dc93ad6c380e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -316,9 +324,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a9f31984da8d559689cd7a92266802238"><td class="memItemLeft" align="right" valign="top"><a class="el" href="libmcp2221_8h.html#aa99eec3357ac0e97993ece152e6c3349">mcp2221_error</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="libmcp2221_8h.html#a9f31984da8d559689cd7a92266802238">mcp2221_setGPIO</a> (<a class="el" href="structmcp2221__t.html">mcp2221_t</a> *device, <a class="el" href="libmcp2221_8h.html#ae3a7d0eb77257e2c48e54aaf0912450f">mcp2221_gpio_t</a> pins, <a class="el" href="libmcp2221_8h.html#ac56f738d9a6d2370de73fa5894d573ab">mcp2221_gpio_value_t</a> value)</td></tr>
 <tr class="memdesc:a9f31984da8d559689cd7a92266802238"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set GPIO pin output values.  <a href="#a9f31984da8d559689cd7a92266802238">More...</a><br /></td></tr>
 <tr class="separator:a9f31984da8d559689cd7a92266802238"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5fc8582d73cc25b28099fb3ea98204be"><td class="memItemLeft" align="right" valign="top"><a class="el" href="libmcp2221_8h.html#aa99eec3357ac0e97993ece152e6c3349">mcp2221_error</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="libmcp2221_8h.html#a5fc8582d73cc25b28099fb3ea98204be">mcp2221_getClockOut</a> (<a class="el" href="structmcp2221__t.html">mcp2221_t</a> *device, <a class="el" href="libmcp2221_8h.html#a81b631e69f32e6c552a11f7249a0e429">mcp2221_clkdiv_t</a> *div)</td></tr>
-<tr class="memdesc:a5fc8582d73cc25b28099fb3ea98204be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current clock output divider (SRAM)  <a href="#a5fc8582d73cc25b28099fb3ea98204be">More...</a><br /></td></tr>
-<tr class="separator:a5fc8582d73cc25b28099fb3ea98204be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8bca93760360e521e00a1346e7704b62"><td class="memItemLeft" align="right" valign="top"><a class="el" href="libmcp2221_8h.html#aa99eec3357ac0e97993ece152e6c3349">mcp2221_error</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="libmcp2221_8h.html#a8bca93760360e521e00a1346e7704b62">mcp2221_getClockOut</a> (<a class="el" href="structmcp2221__t.html">mcp2221_t</a> *device, <a class="el" href="libmcp2221_8h.html#a81b631e69f32e6c552a11f7249a0e429">mcp2221_clkdiv_t</a> *div, <a class="el" href="libmcp2221_8h.html#a685f57a234ef7f0bdd9dc93ad6c380e8">mcp2221_clkduty_t</a> *duty)</td></tr>
+<tr class="memdesc:a8bca93760360e521e00a1346e7704b62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current clock output divider (SRAM)  <a href="#a8bca93760360e521e00a1346e7704b62">More...</a><br /></td></tr>
+<tr class="separator:a8bca93760360e521e00a1346e7704b62"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4566b3fed1538c5154421eefe852761a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="libmcp2221_8h.html#aa99eec3357ac0e97993ece152e6c3349">mcp2221_error</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="libmcp2221_8h.html#a4566b3fed1538c5154421eefe852761a">mcp2221_getDAC</a> (<a class="el" href="structmcp2221__t.html">mcp2221_t</a> *device, <a class="el" href="libmcp2221_8h.html#af1baf3c73da0c945f316e52224176354">mcp2221_dac_ref_t</a> *ref, int *value)</td></tr>
 <tr class="memdesc:a4566b3fed1538c5154421eefe852761a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current DAC voltage reference and output value (SRAM)  <a href="#a4566b3fed1538c5154421eefe852761a">More...</a><br /></td></tr>
 <tr class="separator:a4566b3fed1538c5154421eefe852761a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -541,6 +549,58 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a45d42084d5a9c93dd312f79fadef9509"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MCP2221_GPIO_MODE_ADC&#160;&#160;&#160;<a class="el" href="libmcp2221_8h.html#a65b030f1e23bb1515fba133297b81eb3ae52d1b2ff3dd36f4f25a30f486516a53">MCP2221_GPIO_MODE_ALT1</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>TODO </p>
+
+</div>
+</div>
+<a class="anchor" id="a608e04b41c7baf5bd35c270b9d31c9d3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MCP2221_GPIO_MODE_DAC&#160;&#160;&#160;<a class="el" href="libmcp2221_8h.html#a65b030f1e23bb1515fba133297b81eb3ae8cf678f7ed979d15dc33f8b720cd6e7">MCP2221_GPIO_MODE_ALT2</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>TODO </p>
+
+</div>
+</div>
+<a class="anchor" id="acd9705937ecf9c782e43fdd281c8843f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MCP2221_GPIO_MODE_IOC&#160;&#160;&#160;<a class="el" href="libmcp2221_8h.html#a65b030f1e23bb1515fba133297b81eb3a986e71ece19d9e66db889d1aeea3f7ce">MCP2221_GPIO_MODE_ALT3</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>TODO </p>
+
+</div>
+</div>
+<a class="anchor" id="afc920106ea5f07939bb573388f1d9567"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MCP2221_GPIO_MODE_SSPND&#160;&#160;&#160;<a class="el" href="libmcp2221_8h.html#a65b030f1e23bb1515fba133297b81eb3ab77c8bd06d115342f005597990a436e1">MCP2221_GPIO_MODE_DEDI</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>TODO </p>
+
+</div>
+</div>
 <a class="anchor" id="a13e3a85426e84cfa272d693c7da2d036"></a>
 <div class="memitem">
 <div class="memproto">
@@ -609,31 +669,31 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Clock reference output divider from 12MHz. </p>
+<p>Clock reference output divider from 48MHz. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a81b631e69f32e6c552a11f7249a0e429a77c18e33feb101e62a874e704a7a4e55"></a>MCP2221_CLKDIV_RESERVED&#160;</td><td class="fielddoc">
 <p>Invalid </p>
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="a81b631e69f32e6c552a11f7249a0e429a412a55e973e3650aaeab450e42fdf7f4"></a>MCP2221_CLKDIV_2&#160;</td><td class="fielddoc">
-<p>6MHz </p>
+<p>24MHz </p>
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="a81b631e69f32e6c552a11f7249a0e429ad4d21027b3d18214e80d1b1027e9bc1c"></a>MCP2221_CLKDIV_4&#160;</td><td class="fielddoc">
-<p>3MHz </p>
+<p>12MHz </p>
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="a81b631e69f32e6c552a11f7249a0e429aa4e1ec123bf718e62f89b16e0912ab04"></a>MCP2221_CLKDIV_8&#160;</td><td class="fielddoc">
-<p>1.5MHz </p>
+<p>6MHz </p>
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="a81b631e69f32e6c552a11f7249a0e429a110f128f0e4cdc8511aa4259cc5124b3"></a>MCP2221_CLKDIV_16&#160;</td><td class="fielddoc">
-<p>750KHz </p>
+<p>3MHz </p>
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="a81b631e69f32e6c552a11f7249a0e429a507fbd72ab914ac33cc15fada211e0ab"></a>MCP2221_CLKDIV_32&#160;</td><td class="fielddoc">
-<p>375KHz </p>
+<p>1.5MHz </p>
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="a81b631e69f32e6c552a11f7249a0e429a4901dc1815682a2c34a57e3950d31910"></a>MCP2221_CLKDIV_64&#160;</td><td class="fielddoc">
-<p>187.5KHz </p>
+<p>750KHz </p>
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="a81b631e69f32e6c552a11f7249a0e429ae4bbbe749300ea024a927b7bdc584333"></a>MCP2221_CLKDIV_128&#160;</td><td class="fielddoc">
-<p>93.75KHz </p>
+<p>375KHz </p>
 </td></tr>
 </table>
 
@@ -652,7 +712,7 @@ Functions</h2></td></tr>
 <p>Clock reference output duty cycle. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a685f57a234ef7f0bdd9dc93ad6c380e8a14912730b9ffb874b68657eac08bd316"></a>MCP2221_CLKDUTY_0&#160;</td><td class="fielddoc">
-<p>0% duty cycle, I guess this means disabled? </p>
+<p>0% duty cycle, disabled </p>
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="a685f57a234ef7f0bdd9dc93ad6c380e8acba37b95106ffe9e63a3cb39eac4055a"></a>MCP2221_CLKDUTY_25&#160;</td><td class="fielddoc">
 <p>25% </p>
@@ -1138,7 +1198,7 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a5fc8582d73cc25b28099fb3ea98204be"></a>
+<a class="anchor" id="a8bca93760360e521e00a1346e7704b62"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -1152,7 +1212,13 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="libmcp2221_8h.html#a81b631e69f32e6c552a11f7249a0e429">mcp2221_clkdiv_t</a> *&#160;</td>
-          <td class="paramname"><em>div</em>&#160;</td>
+          <td class="paramname"><em>div</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="libmcp2221_8h.html#a685f57a234ef7f0bdd9dc93ad6c380e8">mcp2221_clkduty_t</a> *&#160;</td>
+          <td class="paramname"><em>duty</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1166,7 +1232,8 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">[device]</td><td>Device to operate on </td></tr>
-    <tr><td class="paramname">[div]</td><td>Pointer to <a class="el" href="libmcp2221_8h.html#a81b631e69f32e6c552a11f7249a0e429" title="Clock reference output divider from 12MHz. ">mcp2221_clkdiv_t</a> variable where value will be placed </td></tr>
+    <tr><td class="paramname">[div]</td><td>Pointer to <a class="el" href="libmcp2221_8h.html#a81b631e69f32e6c552a11f7249a0e429" title="Clock reference output divider from 48MHz. ">mcp2221_clkdiv_t</a> variable where value will be placed </td></tr>
+    <tr><td class="paramname">[duty]</td><td>Pointer to <a class="el" href="libmcp2221_8h.html#a685f57a234ef7f0bdd9dc93ad6c380e8" title="Clock reference output duty cycle. ">mcp2221_clkduty_t</a> variable where value will be placed </td></tr>
   </table>
   </dd>
 </dl>
@@ -1711,8 +1778,8 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">[device]</td><td>Device to operate on </td></tr>
-    <tr><td class="paramname">[div]</td><td></td></tr>
-    <tr><td class="paramname">[duty]</td><td>TODO </td></tr>
+    <tr><td class="paramname">[div]</td><td>Pointer to <a class="el" href="libmcp2221_8h.html#a81b631e69f32e6c552a11f7249a0e429" title="Clock reference output divider from 48MHz. ">mcp2221_clkdiv_t</a> variable where value will be placed </td></tr>
+    <tr><td class="paramname">[duty]</td><td>Pointer to <a class="el" href="libmcp2221_8h.html#a685f57a234ef7f0bdd9dc93ad6c380e8" title="Clock reference output duty cycle. ">mcp2221_clkduty_t</a> variable where value will be placed </td></tr>
   </table>
   </dd>
 </dl>
@@ -2499,7 +2566,7 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">[device]</td><td>Device to operate on </td></tr>
-    <tr><td class="paramname">[div]</td><td>Frequency divider from 12MHz </td></tr>
+    <tr><td class="paramname">[div]</td><td>Frequency divider from 48MHz </td></tr>
     <tr><td class="paramname">[duty]</td><td>Duty cycle </td></tr>
   </table>
   </dd>
@@ -3031,7 +3098,7 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">[device]</td><td>Device to operate on </td></tr>
-    <tr><td class="paramname">[div]</td><td>Frequency divider from 12MHz </td></tr>
+    <tr><td class="paramname">[div]</td><td>Frequency divider from 48MHz </td></tr>
     <tr><td class="paramname">[duty]</td><td>Duty cycle </td></tr>
   </table>
   </dd>
@@ -3208,7 +3275,7 @@ Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 24 2016 22:31:43 for MCP2221 HID Library by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Dec 30 2016 12:34:58 for MCP2221 HID Library by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

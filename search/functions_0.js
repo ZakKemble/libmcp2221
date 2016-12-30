@@ -5,7 +5,7 @@ var searchData=
   ['mcp2221_5fexit',['mcp2221_exit',['../libmcp2221_8h.html#a0ca2f02b9d01e43b723c1ebe0c012c65',1,'libmcp2221.h']]],
   ['mcp2221_5ffind',['mcp2221_find',['../libmcp2221_8h.html#a244ac12ea9ba1ad280aebaa037174f72',1,'libmcp2221.h']]],
   ['mcp2221_5fgetadc',['mcp2221_getADC',['../libmcp2221_8h.html#a07cd309d87ee211bde2f6ea7efec96e6',1,'libmcp2221.h']]],
-  ['mcp2221_5fgetclockout',['mcp2221_getClockOut',['../libmcp2221_8h.html#a5fc8582d73cc25b28099fb3ea98204be',1,'libmcp2221.h']]],
+  ['mcp2221_5fgetclockout',['mcp2221_getClockOut',['../libmcp2221_8h.html#a8bca93760360e521e00a1346e7704b62',1,'libmcp2221.h']]],
   ['mcp2221_5fgetdac',['mcp2221_getDAC',['../libmcp2221_8h.html#a4566b3fed1538c5154421eefe852761a',1,'libmcp2221.h']]],
   ['mcp2221_5fgetgpio',['mcp2221_getGPIO',['../libmcp2221_8h.html#a74b8c16e78065e77cdb82ae0d18736b0',1,'libmcp2221.h']]],
   ['mcp2221_5fgetinterrupt',['mcp2221_getInterrupt',['../libmcp2221_8h.html#aa6cb1017b016f3a9efeecef53c8dc550',1,'libmcp2221.h']]],
