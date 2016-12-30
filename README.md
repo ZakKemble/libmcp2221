@@ -12,7 +12,7 @@ This library also makes use of [HIDAPI](http://www.signal11.us/oss/hidapi/).
 | DAC     | Supported
 | GPIO    | Supported
 | Interrupt input        | Supported
-| Clock reference output | Mostly supported*
+| Clock reference output | Supported
 | USB Descriptors (Manufacturer, product, serial, VID, PID) | Supported
 | I2C/SMB | Limited support, WIP
 | Flash password protection | Not yet implemented

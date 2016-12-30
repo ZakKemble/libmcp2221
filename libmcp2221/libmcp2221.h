@@ -150,18 +150,18 @@ typedef enum
 
 /**
  * \enum mcp2221_clkdiv_t 
- * \brief Clock reference output divider from 12MHz
+ * \brief Clock reference output divider from 48MHz
  */
 typedef enum
 {
 	MCP2221_CLKDIV_RESERVED = 0,	/**< Invalid */
-	MCP2221_CLKDIV_2 = 1,			/**< 6MHz */
-	MCP2221_CLKDIV_4 = 2,			/**< 3MHz */
-	MCP2221_CLKDIV_8 = 3,			/**< 1.5MHz */
-	MCP2221_CLKDIV_16 = 4,			/**< 750KHz */
-	MCP2221_CLKDIV_32 = 5,			/**< 375KHz */
-	MCP2221_CLKDIV_64 = 6,			/**< 187.5KHz */
-	MCP2221_CLKDIV_128 = 7,			/**< 93.75KHz */
+	MCP2221_CLKDIV_2 = 1,			/**< 24MHz */
+	MCP2221_CLKDIV_4 = 2,			/**< 12MHz */
+	MCP2221_CLKDIV_8 = 3,			/**< 6MHz */
+	MCP2221_CLKDIV_16 = 4,			/**< 3MHz */
+	MCP2221_CLKDIV_32 = 5,			/**< 1.5MHz */
+	MCP2221_CLKDIV_64 = 6,			/**< 750KHz */
+	MCP2221_CLKDIV_128 = 7,			/**< 375KHz */
 }mcp2221_clkdiv_t;
 
 /**
@@ -170,10 +170,10 @@ typedef enum
  */
 typedef enum
 {
-	MCP2221_CLKDUTY_0 = 0x18,		/**< 0% duty cycle, I guess this means disabled? */
-	MCP2221_CLKDUTY_25 = 0x10,		/**< 25% */
-	MCP2221_CLKDUTY_50 = 0x08,		/**< 50% */
-	MCP2221_CLKDUTY_75 = 0x00		/**< 75% */
+	MCP2221_CLKDUTY_0 = 0x00,		/**< 0% duty cycle, disabled */
+	MCP2221_CLKDUTY_25 = 0x08,		/**< 25% */
+	MCP2221_CLKDUTY_50 = 0x10,		/**< 50% */
+	MCP2221_CLKDUTY_75 = 0x18		/**< 75% */
 }mcp2221_clkduty_t;
 
 /**
@@ -438,9 +438,10 @@ mcp2221_error mcp2221_setGPIO(mcp2221_t* device, mcp2221_gpio_t pins, mcp2221_gp
 *
 * @param [device] Device to operate on
 * @param [div] Pointer to ::mcp2221_clkdiv_t variable where value will be placed
+* @param [duty] Pointer to ::mcp2221_clkduty_t variable where value will be placed
 * @return ::mcp2221_error error code
 */
-mcp2221_error mcp2221_getClockOut(mcp2221_t* device, mcp2221_clkdiv_t* div);
+mcp2221_error mcp2221_getClockOut(mcp2221_t* device, mcp2221_clkdiv_t* div, mcp2221_clkduty_t* duty);
 
 /**
 * @brief Get the current DAC voltage reference and output value (SRAM)
@@ -732,7 +733,7 @@ mcp2221_error mcp2221_loadPolarity(mcp2221_t* device, mcp2221_dedipin_t pin, int
 *
 * @param [device] Device to operate on
 * @param [div] 
-* @param [duty] TODO
+* @param [duty]
 * @return ::mcp2221_error error code
 */
 mcp2221_error mcp2221_loadClockOut(mcp2221_t* device, mcp2221_clkdiv_t* div, mcp2221_clkduty_t* duty);
