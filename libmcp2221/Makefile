@@ -39,10 +39,12 @@ ifeq ($(OS),Windows_NT)
 	SOURCES += win/resource.rc
 	LDLIBS += -lsetupapi
 	EXECUTABLE=$(PROJECT).dll
+	NULLOUT=nul
 else
 	# udev is for the HIDRAW version of HIDAPI and usb-1.0 is for the libusb version
 	LDLIBS += -ludev -lusb-1.0
 	EXECUTABLE=$(PROJECT).so
+	NULLOUT=/dev/null
 endif
 
 ARCHIVE=$(PROJECT).a
@@ -77,7 +79,7 @@ clean:
 	rm -rf $(OBJ_DIR)/*.o $(BIN_DIR)/$(EXECUTABLE) $(BIN_DIR)/$(ARCHIVE)
 
 dirs:
-	mkdir $(BIN_DIR) 2>nul || true
-	mkdir $(OBJ_DIR) 2>nul || true
+	mkdir $(BIN_DIR) 2>$(NULLOUT) || true
+	mkdir $(OBJ_DIR) 2>$(NULLOUT) || true
 
 .PHONY: clean all

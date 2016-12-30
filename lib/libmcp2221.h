@@ -379,7 +379,7 @@ mcp2221_gpioconfset_t mcp2221_GPIOConfInit(void);
 * @brief Set the clock reference output divider and duty cycle (SRAM)
 *
 * @param [device] Device to operate on
-* @param [div] Frequency divider from 12MHz
+* @param [div] Frequency divider from 48MHz
 * @param [duty] Duty cycle
 * @return ::mcp2221_error error code
 */
@@ -602,7 +602,7 @@ mcp2221_error mcp2221_savePolarity(mcp2221_t* device, mcp2221_dedipin_t pin, int
 * @brief Save clock reference output settings to flash 
 *
 * @param [device] Device to operate on
-* @param [div] Frequency divider from 12MHz
+* @param [div] Frequency divider from 48MHz
 * @param [duty] Duty cycle
 * @return ::mcp2221_error error code
 */
@@ -732,8 +732,8 @@ mcp2221_error mcp2221_loadPolarity(mcp2221_t* device, mcp2221_dedipin_t pin, int
 * @brief Read clock output settings from flash
 *
 * @param [device] Device to operate on
-* @param [div] 
-* @param [duty]
+* @param [div] Pointer to ::mcp2221_clkdiv_t variable where value will be placed
+* @param [duty] Pointer to ::mcp2221_clkduty_t variable where value will be placed
 * @return ::mcp2221_error error code
 */
 mcp2221_error mcp2221_loadClockOut(mcp2221_t* device, mcp2221_clkdiv_t* div, mcp2221_clkduty_t* duty);

@@ -18,8 +18,6 @@ This library also makes use of [HIDAPI](http://www.signal11.us/oss/hidapi/).
 | Flash password protection | Not yet implemented
 | C++ and C# wrappers       | Not yet implemented
 
-*Reading clock out duty cycle is not documented in the datasheet, but the Microchip library seems to support it.
-
 ## Documentation
 [Doxygen pages](http://zkemble.github.io/libmcp2221/)
 
@@ -37,7 +35,7 @@ Hint:
 ### Using pre-built binaries
 - Copy `libmcp2221.h` to your compilers include directory (`/usr/include/` on Linux)
 - Windows: Copy `./lib/win/libmcp2221.dll` to your compilers lib directory. Each program that uses libmcp2221 will need a copy of `libmcp2221.dll` in the same directory.
-- Linux: Copy `./lib/unix/libmcp2221.so` and `./lib/unix/libmcp2221.a` to `/usr/lib/` (these were compiled on Debian 8.1 x64 using the HIDRAW version of HIDAPI)
+- Linux: Copy `./lib/unix/libmcp2221.so` and `./lib/unix/libmcp2221.a` to `/usr/lib/` (these were compiled on Debian 8.4 x64 using the HIDRAW version of HIDAPI)
 
 ### Compiling
 - Download hid.c for your OS from https://github.com/signal11/hidapi ([Windows](https://raw.githubusercontent.com/signal11/hidapi/master/windows/hid.c) | [Linux (HIDRAW)](https://raw.githubusercontent.com/signal11/hidapi/master/linux/hid.c) | [Linux (LibUSB - this doesn't seem to work at the moment)](https://raw.githubusercontent.com/signal11/hidapi/master/libusb/hid.c) | [Mac](https://raw.githubusercontent.com/signal11/hidapi/master/mac/hid.c)) and [hidapi.h](https://raw.githubusercontent.com/signal11/hidapi/master/hidapi/hidapi.h)

@@ -10,8 +10,8 @@
 
 #define APPNAME 		"MCP2221 Lib"
 #define APPNAME_TERM	"MCP2221 Lib\0"
-#define APPVERSION		1,0,0,0
-#define APPVERSION_STR	"1.0.0.0\0"
+#define APPVERSION		1,0,4,0
+#define APPVERSION_STR	"1.0.4.0\0"
 #define APPCOMPANY		"zakkemble.co.uk\0"
 #define APPCOPYRIGHT	"(c) Zak Kemble 2015\0"
 
