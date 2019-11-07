@@ -281,7 +281,7 @@ extern "C" {
 #endif
 
 /**
-* @brief Initialise, must be called before anything else!
+* @brief Initialize, must be called before anything else!
 *
 * @return ::mcp2221_error error code
 */
@@ -316,14 +316,14 @@ int mcp2221_sameDevice(mcp2221_t* dev1, mcp2221_t* dev2);
 /**
 * @brief Open first MCP2221 device found
 *
-* @return ::mcp2221_error error code
+* @return ::mcp2221_t* pointer to mcp2221 info
 */
 mcp2221_t* mcp2221_open(void);
 
 /**
 * @brief Open device with specified index number (starting from 0 up to however many devices were found)
 *
-* @return ::mcp2221_error error code
+* @return ::mcp2221_t* pointer to mcp2221 info
 */
 mcp2221_t* mcp2221_open_byIndex(int idx);
 
@@ -332,7 +332,7 @@ mcp2221_t* mcp2221_open_byIndex(int idx);
 *
 * Serial enumeration must be enable for this to work - mcp2221_saveSerialEnumerate()
 *
-* @return ::mcp2221_error error code
+* @return ::mcp2221_t* pointer to mcp2221 info
 */
 mcp2221_t* mcp2221_open_bySerial(wchar_t* serial);
 
